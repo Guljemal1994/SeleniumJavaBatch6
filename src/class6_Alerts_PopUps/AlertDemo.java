@@ -11,10 +11,9 @@ public class AlertDemo {
 	public static void main(String[] args) throws InterruptedException {
 	
 		WebDriver driver = BaseClass.setUp();// Below code is for UItestPractice.com
-
-		driver.findElement(By.xpath("//button[@id='alert']")).click();
-
-		// Handling simple alert/PopUps
+		
+        driver.findElement(By.xpath("//button[@id='alert']")).click();
+		//Handling simple alert/PopUps
 		Alert simpleAlert = driver.switchTo().alert();
 		Thread.sleep(1000);
 		String simpleAText = simpleAlert.getText();
@@ -23,7 +22,7 @@ public class AlertDemo {
 		simpleAlert.accept();
 		Thread.sleep(1000);
 
-		// Handling confirmation Alert
+		//Handling confirmation Alert
 		driver.findElement(By.id("confirm")).click();
 		Alert confirmAlert = driver.switchTo().alert();
 		Thread.sleep(1000);
@@ -33,8 +32,8 @@ public class AlertDemo {
 		confirmAlert.dismiss();
 		Thread.sleep(1000);
 
-		// Handling Prompt alerts/confirmation alerts by providing some confirmation
-		// message.
+		//Handling Prompt alerts/confirmation alerts by providing some confirmation
+		//message.
 		String name="Alex";
 		driver.findElement(By.id("prompt")).click();
 		Alert promptAlert = driver.switchTo().alert();
@@ -43,7 +42,6 @@ public class AlertDemo {
 		promptAlert.accept();
 		String text = driver.findElement(By.xpath("//div[@id='demo']")).getText();
 		System.out.println("Text added to alert box:: "+text);
-		
 		
 		if (text.contains(name)) {
 			System.out.println("Text "+name+" was successfully added");

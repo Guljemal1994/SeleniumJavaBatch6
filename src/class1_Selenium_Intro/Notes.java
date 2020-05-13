@@ -44,9 +44,11 @@ public class Notes {
 	 * What is Selenium WebDriver: Sohils Answer=>Selenuim is an open source tool used to automate 
 	 *  webBrowser testing. It helps track with browser.
 	 *  
-	 *  
+	 *  ************************************************************************
 	 * 
-	 * 
+	 * There are 8 explicit locators: id, name, identifier, dom, XPath, 
+	 * link, CSS and UI that Selenium's commands support. 
+	 * I will explain just a few most important locators to avoid overdosage and any confusion.
 	 * 
 	 */
 }

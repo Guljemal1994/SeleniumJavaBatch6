@@ -37,7 +37,8 @@ public class SimpleWindowHandle {
 		System.out.println("Id of Child window:: "+childWindowHandle);
 		
 		
-		driver.switchTo().window(childWindowHandle);
+		driver.switchTo().window(childWindowHandle);//Using swithchTo method to another
+		//window by passing the handle/Id of window
 		
 		String chilWindowTitle = driver.getTitle();
 		System.out.println("Child page title is::"+chilWindowTitle);
