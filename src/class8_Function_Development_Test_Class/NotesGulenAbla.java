@@ -1,4 +1,4 @@
-package com.test;
+package class8_Function_Development_Test_Class;
 
 public class NotesGulenAbla {
 	/*
@@ -17,9 +17,9 @@ public class NotesGulenAbla {
 	identify group by using common attribute and store inside the list
 	loop through list and retrieve value/text of each element
 	using if condition compare if value that we want to select is matching the value from element --> click --> break
+	
 	drop downs with SELECT Tag
 	identify element using any locator
-	
 	create an Object of Select Class
 	get all Options
 	loop through all options and get a text 

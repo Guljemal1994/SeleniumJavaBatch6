@@ -1,4 +1,4 @@
-package com.test;
+package class8_Function_Development_Test_Class;
 
 import java.util.List;
 
@@ -41,7 +41,7 @@ public class Task_FaceBookSignUp extends CommanMethods {
 
 		WebElement daySelect = driver.findElement(By.xpath("//select[@id='day']"));
 
-		selectDdValue(daySelect, "11");
+		selectDdValue(daySelect, 11);
 
 		WebElement yearSelect = driver.findElement(By.xpath("//select[@id='year']"));
 

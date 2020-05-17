@@ -1,7 +1,10 @@
 package com.syntax.utils;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BaseClass {
@@ -10,7 +13,8 @@ public class BaseClass {
 	public static WebDriver setUp() {
 
 		ConfigsReader.readProperties(Constants.CONFIGURATION_FILEPATH);
-
+		System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
+		
 		switch (ConfigsReader.getProperty("browser").toLowerCase()) {
 
 		case "chrome":
@@ -25,7 +29,11 @@ public class BaseClass {
 			throw new RuntimeException("Browser is not supported");
 		}
 
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT_TIME,TimeUnit.SECONDS );
+		
 		driver.get(ConfigsReader.getProperty("url"));
+		
 		return driver;
 	}
 	

@@ -1,4 +1,4 @@
-package com.test;
+package class8_Function_Development_Test_Class;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
